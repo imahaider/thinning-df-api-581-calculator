@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API 581 Thinning DF Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Default Dark Theme (Zinc/Cyan) */
+            --bg-main: #09090b;
+            --bg-card: #18181b;
+            --bg-input: #09090b;
+            --border: #27272a;
+            --text-main: #e4e4e7;
+            --text-muted: #71717a;
+            --accent: #22d3ee;
+            --accent-dim: rgba(34, 211, 238, 0.1);
+            --accent-border: rgba(34, 211, 238, 0.2);
+            --success: #34d399;
+            --warning: #fbbf24;
+            --danger: #fb7185;
+            --shadow-color: rgba(0, 0, 0, 0.3);
+        }
+
+        [data-theme="light"] {
+            /* Light Theme (Slate/Blue) */
+            --bg-main: #f1f5f9;
+            --bg-card: #ffffff;
+            --bg-input: #f8fafc;
+            --border: #cbd5e1;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --accent: #0284c7; /* Darker blue for contrast on white */
+            --accent-dim: #e0f2fe;
+            --accent-border: #7dd3fc;
+            --success: #059669;
+            --warning: #d97706;
+            --danger: #e11d48;
+            --shadow-color: rgba(148, 163, 184, 0.15);
+        }
+        
+        body { 
+            font-family: 'Space Grotesk', system-ui, sans-serif; 
+            background-color: var(--bg-main); 
+            color: var(--text-main); 
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeIn {
+            animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-main); }
+        ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; border: 2px solid var(--bg-main); }
+        ::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+        
+        input[type="number"] { -moz-appearance: textfield; }
+        input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+        
+        ::selection { background: var(--accent-dim); color: var(--accent); }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.2.0",
+    "react/": "https://esm.sh/react@18.2.0/",
+    "react-dom": "https://esm.sh/react-dom@18.2.0",
+    "react-dom/": "https://esm.sh/react-dom@18.2.0/",
+    "recharts": "https://esm.sh/recharts@2.12.7?external=react,react-dom"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>
